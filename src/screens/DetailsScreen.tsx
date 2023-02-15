@@ -8,20 +8,8 @@ import { NetworkProvider } from 'react-native-offline';
 
 
 
-function Details( props :any ) {
-  //const { name } = route.params;
-
-console.log(result)
-  return (
-
-    <Text>Ici</Text>
-
-  );    
-}
-
-
-
-export  const DetailsScreen = ({ navigation }:any,props:any) => { 
+function DetailsScreen( props :any ) {
+  //const { name } = route.params;  const DetailsScreen = ({ navigation }:any,props:any) => { 
   const name=props.route.params.codigo
 
     const DetailsRenderer  = ({ item } : any) => {
@@ -37,6 +25,9 @@ export  const DetailsScreen = ({ navigation }:any,props:any) => {
 
     const DetailsList = ({item}:any) => {
       const { data, status, error } = useModel(name)
+      console.log("data", data);
+      console.log("status", status);
+      console.log("error", error);
 
       if (status === "loading") {
         return <Text>Loading Voiture...</Text>;
@@ -53,6 +44,7 @@ export  const DetailsScreen = ({ navigation }:any,props:any) => {
         />
       );
     };
+    
 
     return (
       <SafeAreaView style={styles.safeContainer}>
@@ -69,14 +61,13 @@ export  const DetailsScreen = ({ navigation }:any,props:any) => {
 const styles = StyleSheet.create({
   safeContainer: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
     backgroundColor:'grey',
   },
   container: {
     backgroundColor:'black',
     flex:1,
     paddingHorizontal: 20,
-    marginTop: 20,
+    marginTop: 10,
     textDecorationColor:'black'
   },
   block:{

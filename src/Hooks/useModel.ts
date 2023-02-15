@@ -7,5 +7,9 @@ async function fetchModel(codigo:number) {
 }
 
 export function useModel(codigo: number) {
-  return useQuery(["Model"], () =>fetchModel(codigo));
+  return useQuery(["Model"], () =>fetchModel(codigo), {
+    onError: (error) => console.log("error", error),
+    onSuccess: (data) => console.log("data", data)
+  });
 }
+

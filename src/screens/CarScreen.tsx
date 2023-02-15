@@ -26,6 +26,7 @@ export  const VoitureScreen = ({ navigation }:any) => {
 
     const VoitureList = () => {
       const { data, status, error } = useVoiture();
+      
     
       if (status === "loading") {
         return <Text>Loading Voiture...</Text>;
@@ -61,14 +62,12 @@ export  const VoitureScreen = ({ navigation }:any) => {
 const styles = StyleSheet.create({
   safeContainer: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
     backgroundColor:'grey',
   },
   container: {
     backgroundColor:'black',
     flex:1,
     paddingHorizontal: 20,
-    marginTop: 20,
     textDecorationColor:'black'
   },
   block:{
