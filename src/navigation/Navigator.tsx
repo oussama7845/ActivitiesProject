@@ -1,7 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from '../screens/LoginScreen';
-import VoitureScreen from '../screens/CarScreen';
-import DetailsScreen from '../screens/DetailsScreen';
+import activityScreen from '../screens/activityScreen';
 const Stack = createStackNavigator();
 
 function Navigator() {
@@ -13,15 +12,11 @@ function Navigator() {
           options={{ title: 'Login' }}
         />
         <Stack.Screen
-          name="Voiture"
-          component={VoitureScreen}
-          options={{ title: 'Voiture' }}
+          name="activity"
+          component={activityScreen}
+          options={{ title: 'activity' }}
         />
-        <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
-          options={{ title: 'Details' }}
-        />
+
       </Stack.Navigator>
       
     );

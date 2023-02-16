@@ -1,7 +1,7 @@
 export enum Routes {
     LOGIN_SCREEN = 'Login',
-    VOITURE_SCREEN = 'Voiture',
+    ACTIVITY_SCREEN = 'activity',
     DETAILS_SCREEN='Details',
-    STARSHIP_FEED_SCREEN = 'Voiture',
-    STARSHIP_DETAIL_SCREEN = 'Voiture',
+    STARSHIP_FEED_SCREEN = 'activity',
+    STARSHIP_DETAIL_SCREEN = 'activity',
   }

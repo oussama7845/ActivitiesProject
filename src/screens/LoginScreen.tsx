@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import Constants from 'expo-constants';
 import { TextInput, Button } from 'react-native-paper';
 
-export default function App({ navigation }:any) {
+export default function LoginScreen({ navigation }:any) {
   const [email, setEmail] = useState("");
   const [pass, setPassword] = useState("");
   const [isVisible, setIsVisible] = useState(true);
@@ -14,7 +14,13 @@ export default function App({ navigation }:any) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Let's Discover our Vi</Text>
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={{ uri: 'https://www.incimages.com/uploaded_files/image/1920x1080/getty_121110878_970642970450047_57450.jpg' }}
+        />
+        <Text style={styles.title}>Welcome Back!</Text>
+      </View>
 
       <View style={{ margin: 10 }}>
         <TextInput
@@ -39,7 +45,7 @@ export default function App({ navigation }:any) {
           }
         />
       </View>
-      <Button style={styles.button} mode="contained" onPress={() => navigation.navigate("Voiture")}>
+      <Button style={styles.button} mode="contained" onPress={() => navigation.navigate("activity")}>
         Login
       </Button>
       <Text style={styles.terms}>Terms and Conditions</Text>
@@ -56,19 +62,31 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   title: {
-    margin: 24,
-    fontSize: 18,
+    margin: 20,
+    fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
-    backgroundColor: '#ecf0f1',
+    color: '#fff',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: {width: -1, height: 1},
+    textShadowRadius: 10,
+    zIndex: 1,
   },
-
+  imageContainer: {
+    position: 'relative',
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    resizeMode: 'cover',
+  },
   button: {
     width: 200,
-    marginLeft: 100,
+    alignSelf: 'center',
     marginTop: 15,
   },
   terms: {
-    marginLeft: 130,
+    alignSelf: 'center',
+    marginTop: 15,
   }
-})
+});
