@@ -1,6 +1,10 @@
 # Boredom app
 Boredom app is a mobile application built with React Native (using Expo) that helps you find activities to avoid boredom.
 
+## expo go link to my Boredom app
+click the link bellow the scan the QR code ↓
+[Expo go link] https://expo.dev/@oussama123/activity?serviceType=classic&distribution=expo-go
+
 ## Features
 - Login with your email and password
 - View detailed information about each activity, including instructions and budget needed
