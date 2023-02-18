@@ -3,7 +3,7 @@ Boredom app is a mobile application built with React Native (using Expo) that he
 
 ## expo go link to my Boredom app
 click the link bellow the scan the QR code ↓  
-[Link text] https://expo.dev/@oussama123/activity?serviceType=classic&distribution=expo-go
+[https://expo.dev/@oussama123/activity?serviceType=classic&distribution=expo-go]  
 
 ## Features
 - Login with your email and password
