@@ -1,52 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bordom app</title>
-  </head>
-  <body>
-    <h1>Boredom app</h1>
-    <p>Boredom app is a mobile application that helps you find activities to do when you're feeling bored. The app provides a wide range of activities and games that can be done alone or with friends, and are suitable for all ages.</p>
+#Boredom app
+Boredom app is a mobile application built with React Native (using Expo) that helps you find activities to avoid boredom.
 
-    <h2>Features</h2>
-    <ul>
-      <li>login with your email and password</li>
-      <li>View detailed information about each activity, including instructions and budget needed</li>
-      <li>click on 'another one' button if u wanna see other activities</li>
-    </ul>
+#Features
+*Login with your email and password
+*View detailed information about each activity, including instructions and budget needed
+*Click on 'Another one' button if you want to see other activities
+#Installation
+*Clone the repository
+*Install the required dependencies by running ```bash npm install ```
+*Start the app by running ```bash npm start```
+*You will find your QR code by running ```bash yarn start ```
+*Open Expo Go on your mobile device
+*Scan the QR code displayed in the terminal to open the app in Expo Go
+Alternatively, you can also run the app in the iOS or Android simulators by following the instructions on the Expo documentation.
 
-    <h2>Installation</h2>
-    <ol>
-      <li>Clone the repository.</li>
-      <li>Install the required dependencies by running <code>npm install</code>.</li>
-      <li>Start the app by running <code>npm start</code>.</li>
-      <li>you will fnd your QR code by running <code>yarn start</code> </li>
-      <li>Open Expo Go on your mobile device.</li>
-      <li>Scan the QR code displayed in the terminal to open the app in Expo Go.</li>
-    </ol>
+#Usage
+*Open the app on your mobile device
+*Login with your email and password
+*An activity will be displayed, including instructions and required budget
+*In case the activity doesn't please you, you can click on 'Another one' button to see new activities
+#Contributing
+If you would like to contribute to Boredom app, please follow these steps:
 
-    <p>Alternatively, you can also run the app in the iOS or Android simulators by following the instructions on the <a href="https://docs.expo.dev/workflow/ios-simulator/">Expo documentation</a>.</p>
+*Fork the repository
+*Create a new branch for your changes
+*Make your changes and commit them
+*Push your changes to your fork
+*Create a pull request to merge your changes into the main branch
 
-    <h2>Usage</h2>
-    <ol>
-      <li>Open the app on your mobile device.</li>
-      <li>login with your email and password.</li>
-      <li>an activities will be displayed, including instructions and required budget.</li>
-      <li>in case the activity doesn't please you , you can click on 'another one' bottom to see new activities.</li>
-      
-    </ol>
-
-    <h2>Contributing</h2>
-    <p>If you would like to contribute to Boredom app, please follow these steps:</p>
-    <ol>
-      <li>Fork the repository.</li>
-      <li>Create a new branch for your changes.</li>
-      <li>Make your changes and commit them.</li>
-      <li>Push your changes to your fork.</li>
-      <li>Create a pull request to merge your changes into the main branch.</li>
-    </ol>
-
-    <p>Please make sure to follow our code of conduct when contributing.</p>
-
-
-  </body>
-</html>
+Please make sure to follow our code of conduct when contributing.
