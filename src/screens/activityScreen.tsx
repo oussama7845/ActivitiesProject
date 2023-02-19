@@ -6,12 +6,13 @@ import {
   StatusBar,
   View,
   ActivityIndicator,
+  ImageBackground,
 } from "react-native";
 import { Button, Card, Text } from "react-native-paper";
 import { useactivity } from "../Hooks/useactivity";
 import { NetworkProvider } from "react-native-offline";
 
-export default function activityScreen() {
+export default function ActivityScreen() {
   const { data, status, error, refetch } = useactivity();
   const [loading, setLoading] = useState(false);
 
@@ -29,61 +30,60 @@ export default function activityScreen() {
   }
 
   return (
-    <SafeAreaView style={styles.safeContainer}>
-      <View style={styles.container}>
-        <Text style={styles.firsttitle}>
-          here's some activities to kill boredom :)
-        </Text>
-        <Card style={styles.card}>
-          <Card.Cover
-            source={{
-              uri:
-                "https://www.startupdonut.co.uk/sites/default/files/ten-steps-to-developing-your-big-idea_1036354855.jpg",
-            }}
-          />
-          <View style={styles.cardContent}>
-            <Text style={styles.title}>* {data.activity} *</Text>
-            <View style={styles.details}>
-              <Text style={styles.detailsText}>Type: {data.type}</Text>
-              <Text style={styles.detailsText}>
-                Participants: {data.participants}
-              </Text>
-              <Text style={styles.detailsText}>Price: {data.price} $ </Text>
+    <View style={styles.container}>
+      <ImageBackground
+        source={require("../../assets/activity.png")}
+        style={styles.imageBackground}
+      >
+        <SafeAreaView style={styles.safeContainer}>
+      
+          <Card style={styles.card}>
+            <View style={styles.cardContent}>
+              <Text style={styles.title}>* {data.activity} *</Text>
+              <View style={styles.details}>
+                <Text style={styles.detailsText}>Type: {data.type}</Text>
+                <Text style={styles.detailsText}>
+                  Participants: {data.participants}
+                </Text>
+                <Text style={styles.detailsText}>Price: {data.price} $ </Text>
+              </View>
+              <Button
+                style={styles.button}
+                mode="contained"
+                onPress={handleRefresh}
+                loading={loading}
+              >
+                another one :)
+              </Button>
             </View>
-            <Button
-              style={styles.button}
-              mode="contained"
-              onPress={handleRefresh}
-              loading={loading}
-            >
-              another one :)
-            </Button>
-          </View>
-        </Card>
-      </View>
-    </SafeAreaView>
+          </Card>
+        </SafeAreaView>
+      </ImageBackground>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  safeContainer: {
-    flex: 1,
-    backgroundColor: "#F2F2F2",
-  },
   container: {
-    backgroundColor: "#F2F2F2",
     flex: 1,
-    paddingHorizontal: 20,
+
+  },
+
+  imageBackground: {
+    flex: 1,
+    width: "100%",
+    height: "100%",
   },
   card: {
-    margin: 20,
+    margin: 5,
+    marginTop: 150,
     borderRadius: 10,
     elevation: 5,
   },
   cardContent: {
     margin: 15,
+  
   },
-
   title: {
     fontSize: 20,
     fontWeight: "bold",
@@ -100,11 +100,5 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20,
-  },
-  firsttitle: {
-    fontSize: 18,
-    fontWeight: "900",
-    marginBottom: 20,
-    marginTop: 15,
   },
 });

@@ -45,7 +45,7 @@ export default function LoginScreen({ navigation }:any) {
           }
         />
       </View>
-      <Button style={styles.button} mode="contained" onPress={() => navigation.navigate("activity")}>
+      <Button style={styles.button} mode="contained" onPress={() => navigation.navigate("accueil")}>
         Login
       </Button>
       <Text style={styles.terms}>Terms and Conditions</Text>
